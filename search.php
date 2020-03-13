@@ -8,6 +8,8 @@ if(isset($_GET['term'])){
 else{
 	$term = "";
 }
+
+
 ?>
 
 <div class="searchContainer">
@@ -38,14 +40,14 @@ if($term == "" || $term == " "){
 
 	<div class="lastSearchContainer">
 	<ul class="trackList">
-		<h2 class="borderBottom">Last Search</h2>
+		<h2 class="borderBottom">Recent Searches</h2>
 
 <?php
 		$username = $userLoggedIn->getUsername();
-		$lastSearch = mysqli_query($con, "SELECT lastSearch FROM users WHERE username = '$username'");
+		$lastSearch = mysqli_query($con, "SELECT * FROM searches WHERE user = '$username' ORDER BY datetime DESC LIMIT 5");
 
 			while($row = mysqli_fetch_array($lastSearch)){
-				$result = $row['lastSearch'];
+				$result = $row['search'];
 
 
 			echo "<div class='lastResult' role='link' tabindex='0' onclick='openPage(\"search.php?term=" . $result . "\")'>
