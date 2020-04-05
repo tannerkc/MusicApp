@@ -6,4 +6,7 @@ preview the app:
 
 http://tannercottle.com/projects/MusicApp
 
-disclosure: only music from post malone, jon bellion and MAX exist in the database and storage (for project preview purposes only)
+create your own account or login with:
+user: guest1 pw: Welcome123!
+
+disclosure: only music from post malone, jon bellion and MAX exist in the database and storage (for project preview purposes only, no copyrights or use for profit.)
